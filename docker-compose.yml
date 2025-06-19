@@ -4,4 +4,5 @@ include:
   - path: '../MyTraefik/docker-compose.yml'
   - path: '../MyJoplin/docker-compose.yml'
   - path: '../zoneminder/docker-compose.yml'
+  - path: '../MyNextCloud/docker-compose.yml'
 
