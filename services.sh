@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Vérifie que deux arguments sont fournis
+# Check we have 2 args
 if [ "$#" -ne 2 ]; then
   echo "Usage: $0 {joplin|nextcloud|zm} {up|down}"
   exit 1
@@ -9,13 +9,13 @@ fi
 SERVICE="$1"
 ACTION="$2"
 
-# Vérifie que l'action est bien "up" ou "down"
+# Check action is "up" or "down"
 if [[ "$ACTION" != "up" && "$ACTION" != "down" ]]; then
-  echo "Erreur : action invalide. Utilise 'up' ou 'down'."
+  echo "Error : invalid action. Use 'up' or 'down'."
   exit 2
 fi
 
-# Définit les services Docker à lancer ou arrêter
+# Define docker services to start or stop
 case "$SERVICE" in
   joplin)
     SERVICES="joplin_app joplin_db"
@@ -27,12 +27,12 @@ case "$SERVICE" in
     SERVICES="zm-db zm"
     ;;
   *)
-    echo "Erreur : service inconnu. Utilise 'joplin', 'nextcloud' ou 'zm'."
+    echo "Error : unknown service. Use 'joplin', 'nextcloud' or 'zm'."
     exit 3
     ;;
 esac
 
-# Exécute la commande docker compose appropriée
+# Execute docker compose command
 if [ "$ACTION" = "up" ]; then
   docker compose up $SERVICES -d
 else

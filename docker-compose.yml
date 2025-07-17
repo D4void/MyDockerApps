@@ -1,4 +1,4 @@
-# Compose file to launch my apps relying on Traefik
+# Compose file to launch my apps, all relying on the same traefik project
 #   - MyJoplin
 #   - Zoneminder
 #   - MyNextcloud
