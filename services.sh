@@ -36,5 +36,5 @@ esac
 if [ "$ACTION" = "up" ]; then
   docker compose up $SERVICES -d
 else
-  docker compose down
+  docker compose down $SERVICES
 fi
