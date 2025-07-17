@@ -1,4 +1,7 @@
 # Compose file to launch my apps relying on Traefik
+#   - MyJoplin
+#   - Zoneminder
+#   - MyNextcloud
 
 include:
   - path: '../MyTraefik/docker-compose.yml'
