@@ -18,7 +18,7 @@ fi
 # Définit les services Docker à lancer ou arrêter
 case "$SERVICE" in
   joplin)
-    SERVICES="MyJoplinApp MyJoplinPostgres"
+    SERVICES="joplin_app joplin_db"
     ;;
   nextcloud)
     SERVICES="nc-db nc-redis nc-nextcloud nc-cron"
