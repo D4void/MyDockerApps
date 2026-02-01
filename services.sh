@@ -21,7 +21,7 @@ case "$SERVICE" in
     SERVICES="joplin_app joplin_db"
     ;;
   nextcloud)
-    SERVICES="nc-db nc-redis nc-nextcloud nc-cron"
+    SERVICES="nc-db nc-redis nc-collabora nc-nextcloud nc-cron"
     ;;
   zm)
     SERVICES="zm-db zm"
